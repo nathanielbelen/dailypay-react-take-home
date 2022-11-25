@@ -1,6 +1,7 @@
 const express = require('express');
 
 const app = express();
+app.use(express.json());
 
 const port = process.env.PORT || 8080;
 app.listen(port);
@@ -237,7 +238,7 @@ app.get('/api/getBallotData', (req, res) => {
 });
 
 app.post('/api/sendBallotData', (req, res) => {
-
+  console.log(req.body);
 });
 
 console.log('App is listening on port ' + port);

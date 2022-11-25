@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import Ballot from './Components/Ballot/Ballot';
+import Ballot from './Components/Ballot';
 import api from './Api/Api';
 
 function App() {

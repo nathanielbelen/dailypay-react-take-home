@@ -1,15 +1,23 @@
 .nominee {
+  flex: 1 0 33.3%;
+  display: flex;
+  row-gap: 10px;
+  justify-content: space-evenly;
+  padding-top: 2rem;
+}
+
+.card {
   background-color: #009B86;
   width: 250px;
   padding: 10px;
 }
 
-.nominee:hover {
+.card:hover {
   background-color: #34AC9C;
   color: #CCCCCC;
 }
 
-.nominee .movieTitle {
+.card .movieTitle {
   font-weight: 500;
   margin-top: -7px;
   display: flex;
@@ -18,7 +26,7 @@
   height: 69px;
 }
 
-.nominee .movieImage {
+.card .movieImage {
   height: 350px;
   max-width: 250px;
 }

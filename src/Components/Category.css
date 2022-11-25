@@ -1,5 +1,5 @@
 .category {
-
+  padding: 0 0 1rem;
 }
 
 .categoryTitle {
@@ -7,11 +7,11 @@
   color: white;
   background: gray;
   padding: 1rem;
+  margin: 0 0 -2rem;
 }
 
 .nominees {
   margin: 2rem 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
 }

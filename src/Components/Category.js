@@ -13,17 +13,18 @@ const Category = ({ category: { id, items, title }, ballotPicks, setBallotPicks 
     }
   }, [selectedId])
 
-  return (<div className='category'>
-    <div className='categoryTitle'>{title}</div>
-    <div className='nominees'>
-      {items.map((nominee, index) => {
-        return (
-          <Nominee nominee={nominee} key={index} selectedId={selectedId} setSelectedId={setSelectedId} />
-        )
-      })}
-
+  return (
+    <div className='category'>
+      <div className='categoryTitle'>{title}</div>
+      <div className='nominees'>
+        {items.map((nominee, index) => {
+          return (
+            <Nominee nominee={nominee} key={index} selectedId={selectedId} setSelectedId={setSelectedId} />
+          )
+        })}
+      </div>
     </div>
-  </div>)
+  )
 }
 
 

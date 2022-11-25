@@ -3,7 +3,7 @@ import './Nominee.css';
 
 const Nominee = ({ nominee: { title, photoUrL, id }, setSelectedId, selectedId }) => {
   return (
-    <StyledDiv className='nominee' id={id} selectedId={selectedId} setSelectedId={setSelectedId}>
+    <StyledDiv id={id} selectedId={selectedId} setSelectedId={setSelectedId}>
       <div className='movieTitle'>{title}</div>
       <img className='movieImage' src={photoUrL} alt={title} />
     </StyledDiv>
@@ -19,16 +19,20 @@ const StyledDiv = ({ id, selectedId, setSelectedId, children }) => {
 
   if (id === selectedId) {
     return (
-      <div className='nominee selected'>
-        {children}
-        <button className='selectMovieButton selected'>✔️</button>
+      <div className='nominee'>
+        <div className='card selected'>
+          {children}
+          <button className='selectMovieButton selected'>✔️</button>
+        </div>
       </div>
     )
   }
   return (
     <div className='nominee'>
-      {children}
-      <button className='selectMovieButton' onClick={handleClick}>Select Movie</button>
+      <div className='card'>
+        {children}
+        <button className='selectMovieButton' onClick={handleClick}>Select Movie</button>
+      </div>
     </div>
   )
 }

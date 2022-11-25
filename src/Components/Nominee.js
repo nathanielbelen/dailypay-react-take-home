@@ -1,19 +1,18 @@
 import React from 'react';
 import './Nominee.css';
 
-const Nominee = ({ nominee: { title, photoUrL, id }, setSelectedId, selectedId }) => {
+const Nominee = ({ nominee: { title, photoUrL, id }, setSelectedId, selectedId, categoryId }) => {
   return (
-    <StyledDiv id={id} selectedId={selectedId} setSelectedId={setSelectedId}>
-      <div className='movieTitle'>{title}</div>
+    <StyledDiv id={id} selectedId={selectedId} setSelectedId={setSelectedId} categoryId={categoryId}>
+      <label className='movieTitle' htmlFor={id}>{title}</label>
       <img className='movieImage' src={photoUrL} alt={title} />
     </StyledDiv>
   )
 }
 
-const StyledDiv = ({ id, selectedId, setSelectedId, children }) => {
+const StyledDiv = ({ id, selectedId, setSelectedId, categoryId, children }) => {
 
   const handleClick = (e) => {
-    e.preventDefault();
     setSelectedId(id);
   }
 
@@ -22,7 +21,7 @@ const StyledDiv = ({ id, selectedId, setSelectedId, children }) => {
       <div className='nominee'>
         <div className='card selected'>
           {children}
-          <button className='selectMovieButton selected'>✔️</button>
+          <input type='radio' name={categoryId} className='selectMovieButton selected' value={id} onClick={handleClick}/>
         </div>
       </div>
     )
@@ -31,7 +30,7 @@ const StyledDiv = ({ id, selectedId, setSelectedId, children }) => {
     <div className='nominee'>
       <div className='card'>
         {children}
-        <button className='selectMovieButton' onClick={handleClick}>Select Movie</button>
+          <input type='radio' name={categoryId} value={id}  className='selectMovieButton' onClick={handleClick} />
       </div>
     </div>
   )

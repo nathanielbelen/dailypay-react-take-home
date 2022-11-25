@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useMemo } from 'react';
 import './Ballot.css';
 import Category from './Category'
 import SubmitButton from './SubmitButton'
@@ -6,18 +6,23 @@ import SubmitButton from './SubmitButton'
 const Ballot = ({ ballotData: { items = [] } }) => {
   let [ballotPicks, setBallotPicks] = useState({});
 
+  let categories = useMemo(() => {
+    return items.map((groups) => {
+      return groups.id
+    })
+  }, [items])
+
   return (
-    <form className='ballot'>
+    <div className='ballot'>
       <fieldset>
-      {items.map((category, index) => {
-        console.log(category);
-        return (
-          <Category category={category} key={index} setBallotPicks={setBallotPicks} ballotPicks={ballotPicks} />
-        )
-      })}
-      <SubmitButton />
+        {items.map((category, index) => {
+          return (
+            <Category category={category} key={index} setBallotPicks={setBallotPicks} ballotPicks={ballotPicks} />
+          )
+        })}
+        <SubmitButton ballotPicks={ballotPicks} categories={categories}/>
       </fieldset>
-    </form>
+    </div>
   )
 }
 

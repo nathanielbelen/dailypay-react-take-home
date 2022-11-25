@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import './App.css';
 import Ballot from './Components/Ballot';
 import api from './Api/Api';
@@ -10,7 +10,6 @@ function App() {
     api.getBallotData()
       .then((data) => {
         setBallotData(data);
-        console.log(data)
       })
   }, [])
 

@@ -34,20 +34,34 @@
 .selectMovieButton {
   margin: 7px 0 0 0;
   padding: 0;
-  display: block;
   height: 35px;
   width: 100%;
-  border-color: black;
-  border-width: 1px;
-  outline: none;
   font: inherit;
   color: inherit;
   background: #009B86;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid rgb(170, 170, 170);
+  border-width: 1px;
 }
 
 .selectMovieButton:hover {
   background: inherit;
   color: inherit;
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input[type="radio"]:checked::after {
+  content: '✔️';
+}
+
+input[type="radio"]::after {
+  content: 'SELECT MOVIE';
 }
 
 .selected {

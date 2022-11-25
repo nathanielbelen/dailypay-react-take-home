@@ -230,6 +230,11 @@ const generateBallotData = () => {
   }
 }
 
+const validateBallotPicks = (picks) => {
+  if (Object.keys(picks).length === 7) return true;
+  return false;
+}
+
 const ballotData = generateBallotData();
 
 app.get('/api/getBallotData', (req, res) => {
@@ -238,7 +243,11 @@ app.get('/api/getBallotData', (req, res) => {
 });
 
 app.post('/api/sendBallotData', (req, res) => {
-  console.log(req.body);
+  if (validateBallotPicks(req.body)) {
+    res.status(200).send()
+  } else {
+    res.status(400).send('picks could not be validated');
+  }
 });
 
 console.log('App is listening on port ' + port);

@@ -16,21 +16,18 @@ const StyledDiv = ({ id, selectedId, setSelectedId, categoryId, children }) => {
     setSelectedId(id);
   }
 
+  let card = 'card';
+  let selectMovieButton = 'selectMovieButton'
   if (id === selectedId) {
-    return (
-      <div className='nominee'>
-        <div className='card selected'>
-          {children}
-          <input type='radio' name={categoryId} className='selectMovieButton selected' value={id} onClick={handleClick}/>
-        </div>
-      </div>
-    )
+    card += ' selected'
+    selectMovieButton += ' selected'
   }
+
   return (
     <div className='nominee'>
-      <div className='card'>
+      <div className={card}>
         {children}
-          <input type='radio' name={categoryId} value={id}  className='selectMovieButton' onClick={handleClick} />
+        <input type='radio' name={categoryId} className={selectMovieButton} value={id} onClick={handleClick} />
       </div>
     </div>
   )

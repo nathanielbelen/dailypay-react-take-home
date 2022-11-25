@@ -4,6 +4,7 @@ This is my attempt at the [DailyPay take-home React assessment](https://github.c
 
 To-do:
   - Expand on the Submit Ballot logic to dynamically render a success/failure modal depending on the response of the POST request.
+  - Add unit tests.
 
 ## Directions:
  1) Build an application that displays a list of categories and nominees. Please follow the design in the wireframe below. Run `yarn start` to start the application.

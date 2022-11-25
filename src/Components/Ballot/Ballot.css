@@ -1,3 +1,20 @@
 .ballot {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+.submitBallot {
+  padding: 0;
+  display: block;
+  height: 50px;
+  width: 45%;
+  border-color: black;
+  border-width: 1px;
+  outline: none;
+  font: inherit;
+  color: #000000;
+  background: #FFF6BA;
+  font-weight: 500;
 }

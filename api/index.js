@@ -236,4 +236,8 @@ app.get('/api/getBallotData', (req, res) => {
   console.log('Sent navigation categories and list of nominees');
 });
 
+app.post('/api/sendBallotData', (req, res) => {
+
+});
+
 console.log('App is listening on port ' + port);

@@ -1,5 +1,9 @@
-.App {
+html {
   background-color: #0D2436;
+}
+
+.App {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
   color: #FFFFFF;
   text-align: center;
 }
@@ -11,4 +15,5 @@
 .container {
   margin: auto;
   width: 70vw;
+  padding-bottom: 2rem;
 }

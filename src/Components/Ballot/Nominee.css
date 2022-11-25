@@ -1,22 +1,45 @@
 .nominee {
   background-color: #009B86;
   width: 250px;
-
   padding: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
+}
+
+.nominee:hover {
+  background-color: #34AC9C;
 }
 
 .nominee .movieTitle {
-
-}
-
-.nominee .movieImageContainer {
-
+  font-weight: 500;
+  margin-top: -7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 69px;
 }
 
 .nominee .movieImage {
-
+  height: 350px;
+  max-width: 250px;
 }
 
+.selectMovieButton {
+  margin: 7px 0 0 0;
+  padding: 0;
+  display: block;
+  height: 35px;
+  width: 100%;
+  border-color: black;
+  border-width: 1px;
+  outline: none;
+  font: inherit;
+  color: #FFFFFF;
+  background: #009B86;
+}
+
+.selectMovieButton:hover {
+  background: inherit;
+}
+
+.selected {
+  background: #34AC9C;
+}

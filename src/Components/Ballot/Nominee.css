@@ -6,6 +6,7 @@
 
 .nominee:hover {
   background-color: #34AC9C;
+  color: #CCCCCC;
 }
 
 .nominee .movieTitle {
@@ -32,12 +33,13 @@
   border-width: 1px;
   outline: none;
   font: inherit;
-  color: #FFFFFF;
+  color: inherit;
   background: #009B86;
 }
 
 .selectMovieButton:hover {
   background: inherit;
+  color: inherit;
 }
 
 .selected {

@@ -1,9 +1,10 @@
 import React from 'react';
+import Category from './Category'
 
-const Ballot = () => {
+const Ballot = ({ data }) => {
   return (
     <div className='ballot'>
-      'Your Code Goes Here'
+      <Category />
     </div>
   )
 }

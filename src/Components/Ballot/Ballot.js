@@ -1,10 +1,14 @@
 import React from 'react';
+import './Ballot.css';
 import Category from './Category'
 
-const Ballot = ({ data }) => {
+const Ballot = ({ ballotData: { items = [] } }) => {
   return (
     <div className='ballot'>
-      <Category />
+      {items.map((category, index) => {
+        console.log(category);
+        return (<Category category={category} key={index} />)
+      })}
     </div>
   )
 }

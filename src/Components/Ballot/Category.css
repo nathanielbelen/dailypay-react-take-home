@@ -1,0 +1,17 @@
+.category {
+
+}
+
+.categoryTitle {
+  text-align: left;
+  color: white;
+  background: gray;
+  padding: 1rem;
+}
+
+.nominees {
+  margin: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}

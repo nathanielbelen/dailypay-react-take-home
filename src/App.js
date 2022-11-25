@@ -10,12 +10,16 @@ function App() {
     api.getBallotData()
       .then((data) => {
         setBallotData(data);
+        console.log(data)
       })
   }, [])
 
   return (
-    <div className="App">
-      <Ballot ballotData={ballotData} />
+    <div className='App'>
+      <header className='title'>AWARDS 2021</header>
+      <div className='container'>
+        <Ballot ballotData={ballotData} />
+      </div>
     </div>
   );
 }

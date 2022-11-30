@@ -1,6 +1,6 @@
 # DailyPay Front End Engineering Challenge
 
-This is my attempt at the [DailyPay take-home React assessment](https://github.com/dailypay/react-take-home-test). Given a wireframe and guidelines to follow, I was to create a single-page ballot submission application using the MERN stack.
+This is my attempt at the [DailyPay take-home React assessment](https://github.com/dailypay/react-take-home-test). Given a wireframe and guidelines to follow, I was to create a single-page ballot submission application using the ERN stack.
 
 To-do:
   - Expand on the Submit Ballot logic to dynamically render a success/failure modal depending on the response of the POST request.

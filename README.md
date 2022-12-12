@@ -5,8 +5,13 @@ This is my attempt at the [DailyPay take-home React assessment](https://github.c
 To-do:
   - Expand on the Submit Ballot logic to dynamically render a success/failure modal depending on the response of the POST request. (extra)
   - Add unit tests. (extra)
+  
+## To Start:
+ 1) Run `npm install` or `yarn install` to install necessary dependencies.
+ 2) Run `npm run backend` or `yarn backend` to start the Express server that serves ballot data.
+ 3) Run `npm start` or `yarn start` to start the application.
 
-## Directions:
+## (Legacy) Directions:
  1) Build an application that displays a list of categories and nominees. Please follow the design in the wireframe below. Run `yarn start` to start the application.
  2) Run `yarn backend` to start the server and get access to API methods such as `getBallotData`. Use the React `useEffect` hook to fetch the ballot data from the provided API, and save it to state by using the React `useState` hook.
  [useEffect Documentation](https://reactjs.org/docs/hooks-effect.html)

@@ -3,8 +3,8 @@
 This is my attempt at the [DailyPay take-home React assessment](https://github.com/dailypay/react-take-home-test). Given a wireframe and guidelines to follow, I was to create a single-page ballot submission application using the ERN stack.
 
 To-do:
-  - Expand on the Submit Ballot logic to dynamically render a success/failure modal depending on the response of the POST request.
-  - Add unit tests.
+  - Expand on the Submit Ballot logic to dynamically render a success/failure modal depending on the response of the POST request. (extra)
+  - Add unit tests. (extra)
 
 ## Directions:
  1) Build an application that displays a list of categories and nominees. Please follow the design in the wireframe below. Run `yarn start` to start the application.
